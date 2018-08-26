@@ -13,6 +13,12 @@ import com.crtecnologia.cursomc.domain.Produto;
 import com.crtecnologia.cursomc.repositories.CategoriaRepository;
 import com.crtecnologia.cursomc.repositories.ProdutoRepository;
 
+
+/*
+ * Classe principal
+ * 
+ */
+
 @SpringBootApplication
 public class CursomcApplication implements CommandLineRunner {
 

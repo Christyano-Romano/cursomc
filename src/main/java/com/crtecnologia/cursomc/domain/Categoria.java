@@ -1,6 +1,8 @@
 package com.crtecnologia.cursomc.domain;
 
 import java.io.Serializable;
+
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +12,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+
+
+/*
+ * Classe domain mapeamento dos dados para serem trabalhados.
+ * 
+ */
+
 @Entity
 public class Categoria implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -18,7 +28,8 @@ public class Categoria implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
-
+	
+	@JsonIdentityReference
 	@ManyToMany(mappedBy = "categorias")
 	private List<Produto> produtos = new ArrayList<>();
 
